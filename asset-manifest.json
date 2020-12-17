@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/cuddly-invention/static/css/main.ab7136cd.chunk.css",
-    "main.js": "/cuddly-invention/static/js/main.49157007.chunk.js",
-    "main.js.map": "/cuddly-invention/static/js/main.49157007.chunk.js.map",
-    "runtime-main.js": "/cuddly-invention/static/js/runtime-main.446ea826.js",
-    "runtime-main.js.map": "/cuddly-invention/static/js/runtime-main.446ea826.js.map",
-    "static/js/2.d1b92ff5.chunk.js": "/cuddly-invention/static/js/2.d1b92ff5.chunk.js",
-    "static/js/2.d1b92ff5.chunk.js.map": "/cuddly-invention/static/js/2.d1b92ff5.chunk.js.map",
-    "static/js/3.9db45da6.chunk.js": "/cuddly-invention/static/js/3.9db45da6.chunk.js",
-    "static/js/3.9db45da6.chunk.js.map": "/cuddly-invention/static/js/3.9db45da6.chunk.js.map",
+    "main.css": "/cuddly-invention/static/css/main.3ea34587.chunk.css",
+    "main.js": "/cuddly-invention/static/js/main.58e769bf.chunk.js",
+    "main.js.map": "/cuddly-invention/static/js/main.58e769bf.chunk.js.map",
+    "runtime-main.js": "/cuddly-invention/static/js/runtime-main.22ea780b.js",
+    "runtime-main.js.map": "/cuddly-invention/static/js/runtime-main.22ea780b.js.map",
+    "static/js/2.e84a2615.chunk.js": "/cuddly-invention/static/js/2.e84a2615.chunk.js",
+    "static/js/2.e84a2615.chunk.js.map": "/cuddly-invention/static/js/2.e84a2615.chunk.js.map",
+    "static/js/3.33c6ccb1.chunk.js": "/cuddly-invention/static/js/3.33c6ccb1.chunk.js",
+    "static/js/3.33c6ccb1.chunk.js.map": "/cuddly-invention/static/js/3.33c6ccb1.chunk.js.map",
     "index.html": "/cuddly-invention/index.html",
-    "static/css/main.ab7136cd.chunk.css.map": "/cuddly-invention/static/css/main.ab7136cd.chunk.css.map",
-    "static/js/2.d1b92ff5.chunk.js.LICENSE.txt": "/cuddly-invention/static/js/2.d1b92ff5.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/cuddly-invention/static/media/logo.6ce24c58.svg"
+    "static/css/main.3ea34587.chunk.css.map": "/cuddly-invention/static/css/main.3ea34587.chunk.css.map",
+    "static/js/2.e84a2615.chunk.js.LICENSE.txt": "/cuddly-invention/static/js/2.e84a2615.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.446ea826.js",
-    "static/js/2.d1b92ff5.chunk.js",
-    "static/css/main.ab7136cd.chunk.css",
-    "static/js/main.49157007.chunk.js"
+    "static/js/runtime-main.22ea780b.js",
+    "static/js/2.e84a2615.chunk.js",
+    "static/css/main.3ea34587.chunk.css",
+    "static/js/main.58e769bf.chunk.js"
   ]
 }
