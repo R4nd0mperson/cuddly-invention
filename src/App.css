@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+
+.cell {
+  background: #FCFAF9;
+  border: 1px solid #48E5C2;
+  border-radius: 4px;
+  float: left;
+  line-height: 45px;
+  height: 45px;
+  text-align: center;
+  width: 45px;
+  cursor: pointer;
+  color: #333333;
+}
+.has-unit {
+  background: rgb(226, 225, 225);
+}
+.is-selected{
+  background:#61dafb
+}
+
+
+
+.clear {
+  clear: both;
+  content: "";
+}
+
+.unit-button {
+  height:45px;
+  width:45px
+}

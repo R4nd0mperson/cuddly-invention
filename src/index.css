@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+th, td, p, input {
+  font: 24px Verdana;
+}
+table, th, td 
+{
+  border: solid 1px #DDD;
+  border-collapse: collapse;
+  padding: 2px 3px;
+  text-align: center;
+  height: 64px;
+}
+table {
+  width: 100%;
+}
+th {
+  font-weight:bold;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+.card {
+  width: 100%;
+  max-width: 200px;
+  padding: 20px;
+}
+.stat {
+  font: 12px Verdana;
+}
+
