@@ -43,12 +43,13 @@
   border: 1px solid #48E5C2;
   border-radius: 4px;
   float: left;
-  line-height: 45px;
-  height: 45px;
+  line-height: 30px;
+  height: 30px;
   text-align: center;
-  width: 45px;
+  width: 30px;
   cursor: pointer;
   color: #333333;
+  user-select: none;
 }
 .has-unit {
   background: rgb(226, 225, 225);
@@ -65,6 +66,6 @@
 }
 
 .unit-button {
-  height:45px;
-  width:45px
+  height:30px;
+  width:30px
 }
