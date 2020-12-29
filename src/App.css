@@ -54,8 +54,11 @@
 .has-unit {
   background: rgb(226, 225, 225);
 }
+.has-marker {
+  background: rgba(255, 0, 51, 0.836)
+}
 .is-selected{
-  background:#61dafb
+  background:rgb(10, 225, 253)
 }
 
 

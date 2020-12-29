@@ -69,9 +69,9 @@ const char = [{
 }]
 
 const enemy = 
-{"id": 1,
+{"id": 8,
 "short": "E",
-"job": "Archer",
+"job": "Enemy",
 "hp": 20,
 "atk": 3,
 "def": 3,
@@ -79,20 +79,33 @@ const enemy =
 "range": 5
 }
 
+const marker = {
+	"id": 9,
+	"short": "#"
+}
+const marker2 = {
+	"id": 10,
+	"short": "."
+}
+
+const deck = [0,1,2,3,4,5]
 
 class Cell extends React.Component {
 	
 	render() {
 		var name = ""
 		var hasUnit = false
+		var hasMarker = false
 		if (this.props.value.unit != null){
 			name = this.props.value.unit.short
 			hasUnit = true
+			hasMarker = this.props.value.unit.id === 10
 		}
 
 		let className = 'cell' 
 		+ (this.props.value.isSelected? " is-selected" : "") 
 		+ (hasUnit? " has-unit" : "")
+		+ (hasMarker? " has-marker" : "")
 
 		return(
 			<div 
@@ -150,9 +163,10 @@ class Board extends React.Component {
 	}
 
 	selectUnit(unit){ //for unit buttons
-		if(this.unitSelect == null){
+		console.log(unit)
+		if(this.unitSelect !== unit){
 			this.setState({unitSelect: unit})
-		} else if (this.unitSelect === unit) {
+		} else if (this.unitSelect.id === unit.id) {
 			this.setState({unitSelect: null})
 		}
 	}
@@ -199,9 +213,11 @@ class Board extends React.Component {
 				} else if(!unitSelected){  // no unit selcted
 					return
 				}
-				else if(unitArray[this.state.unitSelect.id - 1] === 0){ //add unit to cell
+				else if(unitArray[this.state.unitSelect.id - 1] === 0 || this.state.unitSelect.id > 7){ //add unit to cell
 					data[x][y].unit = this.state.unitSelect
-					unitArray[this.state.unitSelect.id - 1] +=1;
+					if (this.state.unitSelect.id < 8){
+						unitArray[this.state.unitSelect.id - 1] +=1;
+					}
 					this.setState({
 						boardData:data, 
 						unitSelect:null,
@@ -253,10 +269,13 @@ class Board extends React.Component {
 		let data = this.state.boardData;
 		let unitArray = this.state.unitArray;
 		let hasUnit = data[x][y].unit != null;
+		let isSelected = this.state.cellSelect === data[x][y].cellNumber
 
 		switch (this.state.phase){
 			case 0: //prep
-				if (hasUnit){
+				if (isSelected){
+					return
+				} else if (hasUnit){
 					unitArray[data[x][y].unit.id - 1] -= 1;
 					data[x][y].unit = null;
 					this.setState({
@@ -347,8 +366,24 @@ class Board extends React.Component {
 					<button onClick={()=>this._reset()}>reset</button>
 				</div>
 				<div>
-					
+					<Unit value={enemy} onClick={() =>this.selectUnit(enemy)}/>
+					<Unit value={marker} onClick={() =>this.selectUnit(marker)}/>
+					<Unit value={marker2} onClick={() =>this.selectUnit(marker2)}/>
 				</div>
+			</div>
+		)
+	}
+}
+
+class Travel extends React.Component {
+	state = {
+		deck: shuffle(deck)
+	}
+
+	render(){
+		return(
+			<div>
+
 			</div>
 		)
 	}
@@ -372,6 +407,7 @@ class App extends React.Component {
 				</div>
 				<div id='deck'>
 					<p>Travel</p>
+					<Travel/>
 					<img src='./assets/archer.PNG' alt='placeholder(cards)'/>
 				</div>
 				<div id='combat'>
@@ -393,7 +429,11 @@ function Status(props){
 			</thead>
 			<tbody>
 				<tr>
-					{props.char.map((unit)=>{return(<td key={unit.id*10 + 1}>HP: {unit.hp}</td>)})}
+					{props.char.map((unit)=>{return(
+						<td key={unit.id*10 + 1}>
+							<div>HP: {unit.hp}</div>
+						</td>
+					)})}
 				</tr>
 				<tr>
 					{props.char.map((unit)=>{return(<td key={unit.id*10 + 2} className='stat'>
@@ -410,7 +450,24 @@ function Status(props){
 	)
 }
 
-
+function shuffle(array) {
+	var currentIndex = array.length, temporaryValue, randomIndex;
+  
+	// While there remain elements to shuffle...
+	while (0 !== currentIndex) {
+  
+	  // Pick a remaining element...
+	  randomIndex = Math.floor(Math.random() * currentIndex);
+	  currentIndex -= 1;
+  
+	  // And swap it with the current element.
+	  temporaryValue = array[currentIndex];
+	  array[currentIndex] = array[randomIndex];
+	  array[randomIndex] = temporaryValue;
+	}
+  
+	return array;
+  }
 
 
 
