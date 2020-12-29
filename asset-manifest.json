@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/cuddly-invention/static/css/main.427fb495.chunk.css",
-    "main.js": "/cuddly-invention/static/js/main.b1eab2f4.chunk.js",
-    "main.js.map": "/cuddly-invention/static/js/main.b1eab2f4.chunk.js.map",
+    "main.css": "/cuddly-invention/static/css/main.6f92a1c7.chunk.css",
+    "main.js": "/cuddly-invention/static/js/main.2df9136b.chunk.js",
+    "main.js.map": "/cuddly-invention/static/js/main.2df9136b.chunk.js.map",
     "runtime-main.js": "/cuddly-invention/static/js/runtime-main.2115d31e.js",
     "runtime-main.js.map": "/cuddly-invention/static/js/runtime-main.2115d31e.js.map",
     "static/js/2.15129166.chunk.js": "/cuddly-invention/static/js/2.15129166.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.c7424fa2.chunk.js": "/cuddly-invention/static/js/3.c7424fa2.chunk.js",
     "static/js/3.c7424fa2.chunk.js.map": "/cuddly-invention/static/js/3.c7424fa2.chunk.js.map",
     "index.html": "/cuddly-invention/index.html",
-    "static/css/main.427fb495.chunk.css.map": "/cuddly-invention/static/css/main.427fb495.chunk.css.map",
+    "static/css/main.6f92a1c7.chunk.css.map": "/cuddly-invention/static/css/main.6f92a1c7.chunk.css.map",
     "static/js/2.15129166.chunk.js.LICENSE.txt": "/cuddly-invention/static/js/2.15129166.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2115d31e.js",
     "static/js/2.15129166.chunk.js",
-    "static/css/main.427fb495.chunk.css",
-    "static/js/main.b1eab2f4.chunk.js"
+    "static/css/main.6f92a1c7.chunk.css",
+    "static/js/main.2df9136b.chunk.js"
   ]
 }
